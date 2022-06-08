@@ -49,7 +49,7 @@ def file_upload():
 def files():
     conn = mysql.connect()
     cursor = conn.cursor()
-    cursor.execute("SELECT file_name from file")
+    cursor.execute("SELECT filename from file")
     data = cursor.fetchall()
     conn.close()
 
