@@ -39,7 +39,7 @@ def file_upload():
 
     conn = mysql.connect()
     cursor = conn.cursor()
-    cursor.execute("insert into file(file_name) value('" + file.filename + "')")
+    cursor.execute("insert into file(filename) value('" + file.filename + "')")
     conn.commit()
     conn.close()
 
